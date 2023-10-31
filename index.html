@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script> -->
+    <script
+      src="https://kit.fontawesome.com/38c8102752.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/p.png" class="logo" />
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Full Stack Web Developer</p>
+          <h2>
+            Hi, i'm <span>Prajoth</span><br />
+            kamble from Pune
+          </h2>
+        </div>
+      </div>
+    </div>
+    <!-- ----------About------ -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/user.png" alt="user" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              As a computer engineer, I am on an exciting journey to explore the
+              dynamic and ever-evolving world of technology. From a young age,I
+              have been captivated by the incredible power of computers and
+              their ability to transform the way we live, work,and connect with
+              one another.
+            </p>
+            <div class="tab-title">
+              <div class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </div>
+              <div class="tab-links" onclick="opentab('Experience')">
+                Experience
+              </div>
+              <div class="tab-links" onclick="opentab('Education')">
+                Education
+              </div>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+              <ul>
+                <li>
+                  <span>Web Developer</span><br />Designing Web/App interfaces
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Experience">
+              <ul>
+                <li>
+                  <span>2022-Internship <br /></span><br />
+                  <h3>Oasis infobyte</h3>
+                  <br />•Gained knowledge of the web-development. <br />
+                  • We have made a landing page also the web-based calculator
+                  using html ,CSS.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+              <ul>
+                <li>
+                  <span>2023</span><br />BE from NBN school of engineering,Pune
+                  &nbsp;&nbsp; Cgpa:8.13
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <span>2019</span><br />12th from Adarsh college&nbsp;&nbsp;:60%
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <span>2017</span><br />10th from modern education
+                  society&nbsp;&nbsp;:79.60%
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------------Services----------- -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              A web designer creates the layout and design of a website. In
+              simple terms, a website designer makes a site look good. They use
+              design programmes to create visual elements and usually have
+              expertise in user interface (UI), which means they strategically
+              design a site that's intuitive and easy for visitors to navigate.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- --------portfolio-------- -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" alt="work1" />
+            <div class="layer">
+                <h3>Social Media app</h3>
+                <p>The app connects you to the talented people around the world. Download it from the playstore</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" alt="work1" />
+            <div class="layer">
+                <h3>Music app</h3>
+                <p>These apps provide users with access to songs and personalized recommendations right on their mobile phone or computer. Download it from the playstore</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" alt="work1" />
+            <div class="layer">
+                <h3>Online Shoping app</h3>
+                <p>A mobile shopping app is an application that allows customers to browse and buy products or services from a retailer or service provider. Download it from the playstore</p>
+                <a href="#"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ------download cv------ -->
+    <div id="download">
+        <a href="images/Prajoth kamble full stack developer.pdf" download class="btn">Download CV</a>
+    </div>
+    <!-- ------declaration--- -->
+    <form action="action.php">
+      <input type="email" name="pk" id="">
+    </form>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
